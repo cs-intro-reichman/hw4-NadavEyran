@@ -127,12 +127,12 @@ public class ArrCharOps {
      *  The hash value of an empty array is zero.
      */
     public static long hashCode(char[] arr) {
-        int hashCode = 0;
+        long hashCode = 0;
         int n = arr.length;
 
         for (int i = 0; i<n; i++ ) {
             int power = n-i-1;
-            hashCode = hashCode + (int)Math.pow(7,power);
+            hashCode = hashCode +(arr[i]*(int)Math.pow(7,power));
         }
         return hashCode;
     }
