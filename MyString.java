@@ -33,6 +33,14 @@ public class MyString {
     /** If str1 contains str2, returns true; otherwise returns false. */
     public static boolean contains(String str1, String str2) {
         // Replace the following statement with your code
+        if (str2 == "") {
+            return true;
+        }
+
+        if (str1 == "") {
+            return false;
+        }
+        
         char oneStr2 = str2.charAt(0);
         int lengthStr2 = str2.length();
 
