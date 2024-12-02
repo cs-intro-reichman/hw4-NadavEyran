@@ -33,27 +33,27 @@ public class MyString {
     /** If str1 contains str2, returns true; otherwise returns false. */
     public static boolean contains(String str1, String str2) {
         // Replace the following statement with your code
-        if (str2 == "") {
+        if (str2.length() == 0) {
             return true;
         }
 
-        if (str1 == "") {
+        if (str1.length() == 0) {
             return false;
         }
 
-        char oneStr2 = str2.charAt(0);
-        int lengthStr2 = str2.length();
-
-        if (str1.indexOf(oneStr2) != -1) {
+        for (int i = 0; i <= str1.length() - str2.length(); i++) {
             boolean isSubstring = true;
-            for (int i = 0; i < lengthStr2; i++) {
-                if (str1.indexOf(str2.charAt(i)) == -1) {
+            for (int j = 0; j < str2.length(); j++) {
+                if (str1.charAt(i + j) != str2.charAt(j)) {
                     isSubstring = false;
                     break;
                 }
-            } 
-            return isSubstring; 
+            }
+            if (isSubstring) {
+                return true;
+            }
         }
         return false;
     }
 }
+
