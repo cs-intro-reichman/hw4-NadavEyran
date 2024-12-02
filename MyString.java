@@ -22,7 +22,7 @@ public class MyString {
         for (int i = 0; i<str.length(); i++ ) {
             char currenthar = str.charAt(i);
 
-            if (currenthar > 'A'  && currenthar < 'Z') {
+            if (currenthar >= 'A'  && currenthar <= 'Z') {
                 currenthar = (char) (currenthar + 32);
             }
             newString = newString+currenthar;
@@ -40,7 +40,7 @@ public class MyString {
         if (str1 == "") {
             return false;
         }
-        
+
         char oneStr2 = str2.charAt(0);
         int lengthStr2 = str2.length();
 
